@@ -41,8 +41,8 @@ for d in range(len(domains)):
             print(domains[d], end = "\t")
             print(hits)
     except:
-        #print(domains[d], "unretrievable")
-        print('-')
+        print(domains[d], "unretrievable")
+        #print('-')
 
 
 # Model for single keyword
