@@ -38,8 +38,7 @@ for d in range(len(domains)):
             hits += red.count(key[n])
 
         if hits > 0:
-            print(domains[d], end = "\t")
-            print(hits)
+            print(domains[d], "\t", hits)
     except:
         print(domains[d], "unretrievable")
         #print('-')
@@ -54,5 +53,3 @@ for x in range(len(red)):
         #print("will")
 print(wills)
 """
-
-
