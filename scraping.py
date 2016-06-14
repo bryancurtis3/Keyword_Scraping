@@ -1,12 +1,19 @@
 import requests
+import sys, os
 from bs4 import BeautifulSoup
 
-file = open("now.txt", 'r')
-f = file.read()
+path = str(sys.argv[0])
+path = path.replace("scraping.py", '')
 
+now = "names.txt"
+now = path + now
+file = open(now, 'r')
+f = file.read()
 domains = f.split("\n")
 
-file = open("key.txt", 'r')
+keyfile = "key.txt"
+keyfile = path + keyfile
+file = open(keyfile, 'r')
 lines = file.read()
 lines = lines.lower()
 key = lines.split("\n")
@@ -44,8 +51,6 @@ for d in range(len(domains)):
                     print("Hit %d:" % num)
                     print(surround, "\n----------------------------------------")
                     loc = red.find(key[n], loc + len(key[n]))
-                
-                
+                                
     except:
         print(domains[d], "unretrievable")
-        #print('-')
